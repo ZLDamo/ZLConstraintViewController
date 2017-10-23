@@ -39,18 +39,27 @@
                 if (view.superview == constraint.firstItem ||
                     view.superview == constraint.secondItem ) {
                     constraint.constant *= temp;
-                } else if ([constraint.firstItem isMemberOfClass:[UILayoutGuide class]] ||[constraint.secondItem isMemberOfClass:[UILayoutGuide class]]) {
-                    constraint.constant *= temp;
-                    NSLog(@"system: %@",constraint);
                 } else {
-                    //非父子关系,约束是相互的
-                    constraint.constant *= sqrt(temp);
-                    temp = sqrt(temp);
+                    if (@available(iOS 9.0, *)) {
+                        if ([constraint.firstItem isMemberOfClass:[UILayoutGuide class]] ||[constraint.secondItem isMemberOfClass:[UILayoutGuide class]]) {
+                            constraint.constant *= temp;
+                            NSLog(@"system: %@",constraint);
+                        } else {
+                            constraint.constant *= sqrt(temp);
+                            temp = sqrt(temp);
+                        }
+                       
+                    } else {
+                        //非父子关系,约束是相互的
+                        constraint.constant *= sqrt(temp);
+                        temp = sqrt(temp);
+                    }
                 }
+                    
                 NSLog(@"rate = %f,😎first:origin = %lf,new = %lf",temp,constraint.constant / temp,constraint.constant);
             }
-            
         }
+        
         for (NSLayoutConstraint *constraint in sizeArray) {
             if (constraint.firstAttribute == NSLayoutAttributeWidth ||
                 constraint.firstAttribute == NSLayoutAttributeHeight) {

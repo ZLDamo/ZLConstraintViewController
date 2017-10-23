@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		34D3B9861F9D7B8200B1D942 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D3B9851F9D7B8200B1D942 /* AppDelegate.m */; };
-		34D3B98C1F9D7B8200B1D942 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D3B98A1F9D7B8200B1D942 /* Main.storyboard */; };
 		34D3B98E1F9D7B8200B1D942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D3B98D1F9D7B8200B1D942 /* Assets.xcassets */; };
 		34D3B9911F9D7B8200B1D942 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D3B98F1F9D7B8200B1D942 /* LaunchScreen.storyboard */; };
 		34D3B9941F9D7B8200B1D942 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D3B9931F9D7B8200B1D942 /* main.m */; };
 		34D3B99D1F9D7BF500B1D942 /* ZLConstraintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D3B99B1F9D7BF500B1D942 /* ZLConstraintViewController.m */; };
 		34D3B9A01F9D7D0500B1D942 /* ZLConstraintViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D3B99F1F9D7D0500B1D942 /* ZLConstraintViewController.storyboard */; };
+		34D3B9A31F9D842D00B1D942 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D3B9A11F9D842D00B1D942 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		34D3B9811F9D7B8200B1D942 /* ZLConstraintViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLConstraintViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D3B9841F9D7B8200B1D942 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		34D3B9851F9D7B8200B1D942 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		34D3B98B1F9D7B8200B1D942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34D3B98D1F9D7B8200B1D942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34D3B9901F9D7B8200B1D942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34D3B9921F9D7B8200B1D942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -28,6 +27,7 @@
 		34D3B99A1F9D7BF500B1D942 /* ZLConstraintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLConstraintViewController.h; sourceTree = "<group>"; };
 		34D3B99B1F9D7BF500B1D942 /* ZLConstraintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLConstraintViewController.m; sourceTree = "<group>"; };
 		34D3B99F1F9D7D0500B1D942 /* ZLConstraintViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ZLConstraintViewController.storyboard; sourceTree = "<group>"; };
+		34D3B9A21F9D842D00B1D942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				34D3B99A1F9D7BF500B1D942 /* ZLConstraintViewController.h */,
 				34D3B99B1F9D7BF500B1D942 /* ZLConstraintViewController.m */,
 				34D3B99F1F9D7D0500B1D942 /* ZLConstraintViewController.storyboard */,
-				34D3B98A1F9D7B8200B1D942 /* Main.storyboard */,
+				34D3B9A11F9D842D00B1D942 /* Main.storyboard */,
 				34D3B98D1F9D7B8200B1D942 /* Assets.xcassets */,
 				34D3B98F1F9D7B8200B1D942 /* LaunchScreen.storyboard */,
 				34D3B9921F9D7B8200B1D942 /* Info.plist */,
@@ -105,7 +105,7 @@
 				TargetAttributes = {
 					34D3B9801F9D7B8200B1D942 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -135,7 +135,7 @@
 				34D3B9911F9D7B8200B1D942 /* LaunchScreen.storyboard in Resources */,
 				34D3B98E1F9D7B8200B1D942 /* Assets.xcassets in Resources */,
 				34D3B9A01F9D7D0500B1D942 /* ZLConstraintViewController.storyboard in Resources */,
-				34D3B98C1F9D7B8200B1D942 /* Main.storyboard in Resources */,
+				34D3B9A31F9D842D00B1D942 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,20 +155,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		34D3B98A1F9D7B8200B1D942 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				34D3B98B1F9D7B8200B1D942 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		34D3B98F1F9D7B8200B1D942 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				34D3B9901F9D7B8200B1D942 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		34D3B9A11F9D842D00B1D942 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34D3B9A21F9D842D00B1D942 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -282,12 +282,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3M8N8FMHSN;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ZLConstraintViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.damo.cc.ZLConstraintViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -296,12 +299,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3M8N8FMHSN;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ZLConstraintViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.damo.cc.ZLConstraintViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

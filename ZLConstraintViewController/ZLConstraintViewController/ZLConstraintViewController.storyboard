@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Toa-XZ-qnD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Toa-XZ-qnD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,6 +14,10 @@
         <scene sceneID="kRy-4X-zaT">
             <objects>
                 <viewController id="Toa-XZ-qnD" customClass="ZLConstraintViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kH0-6t-PJU"/>
+                        <viewControllerLayoutGuide type="bottom" id="EJJ-Xj-SsQ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yoi-HJ-VDj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,13 +98,12 @@
                         <constraints>
                             <constraint firstItem="8gv-0v-GkO" firstAttribute="top" secondItem="leP-rx-eCr" secondAttribute="bottom" constant="38" id="8gb-hq-Cbz"/>
                             <constraint firstItem="leP-rx-eCr" firstAttribute="centerX" secondItem="yoi-HJ-VDj" secondAttribute="centerX" id="FG9-xA-Nsd"/>
-                            <constraint firstItem="4XF-d9-k5k" firstAttribute="trailing" secondItem="AfC-U5-gjT" secondAttribute="trailing" constant="10" id="aZ4-AF-jiI"/>
-                            <constraint firstItem="8gv-0v-GkO" firstAttribute="leading" secondItem="4XF-d9-k5k" secondAttribute="leading" constant="50" id="eCm-v2-qf5"/>
-                            <constraint firstItem="AfC-U5-gjT" firstAttribute="leading" secondItem="4XF-d9-k5k" secondAttribute="leading" constant="10" id="hes-bi-KHs"/>
-                            <constraint firstItem="4XF-d9-k5k" firstAttribute="bottom" secondItem="AfC-U5-gjT" secondAttribute="bottom" constant="10" id="lUK-Or-dte"/>
-                            <constraint firstItem="leP-rx-eCr" firstAttribute="top" secondItem="4XF-d9-k5k" secondAttribute="top" constant="22" id="zB7-wq-Hqq"/>
+                            <constraint firstAttribute="trailing" secondItem="AfC-U5-gjT" secondAttribute="trailing" constant="10" id="aZ4-AF-jiI"/>
+                            <constraint firstItem="8gv-0v-GkO" firstAttribute="leading" secondItem="yoi-HJ-VDj" secondAttribute="leading" constant="50" id="eCm-v2-qf5"/>
+                            <constraint firstItem="AfC-U5-gjT" firstAttribute="leading" secondItem="yoi-HJ-VDj" secondAttribute="leading" constant="10" id="hes-bi-KHs"/>
+                            <constraint firstItem="EJJ-Xj-SsQ" firstAttribute="top" secondItem="AfC-U5-gjT" secondAttribute="bottom" constant="10" id="lUK-Or-dte"/>
+                            <constraint firstItem="leP-rx-eCr" firstAttribute="top" secondItem="kH0-6t-PJU" secondAttribute="bottom" constant="22" id="zB7-wq-Hqq"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="4XF-d9-k5k"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CW4-jp-JDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
