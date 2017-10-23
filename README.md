@@ -1,5 +1,5 @@
 # ZLConstraintViewController
-xib中用AutoLayout设置约束时,只需控制器继承该类以宽比例屏幕自动适配的
+xib中用AutoLayout设置约束时,只需控制器继承该类,所有约束自动以宽比例缩放或扩大,无需脱线
 
 注:
 
