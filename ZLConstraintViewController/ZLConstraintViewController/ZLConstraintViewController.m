@@ -41,7 +41,7 @@
                     constraint.constant *= temp;
                 } else {
                     NSString *version = [UIDevice currentDevice].systemVersion;
-                     if (version.floatValue > 9.0) {
+                     if (version.floatValue >= 9.0) {
                         if ([constraint.firstItem isMemberOfClass:[UILayoutGuide class]] ||[constraint.secondItem isMemberOfClass:[UILayoutGuide class]]) {
                             constraint.constant *= temp;
                             NSLog(@"system: %@",constraint);
