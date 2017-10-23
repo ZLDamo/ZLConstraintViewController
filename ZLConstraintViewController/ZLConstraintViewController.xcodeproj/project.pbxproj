@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		34D3B9861F9D7B8200B1D942 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D3B9851F9D7B8200B1D942 /* AppDelegate.m */; };
-		34D3B9891F9D7B8200B1D942 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D3B9881F9D7B8200B1D942 /* ViewController.m */; };
 		34D3B98C1F9D7B8200B1D942 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D3B98A1F9D7B8200B1D942 /* Main.storyboard */; };
 		34D3B98E1F9D7B8200B1D942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D3B98D1F9D7B8200B1D942 /* Assets.xcassets */; };
 		34D3B9911F9D7B8200B1D942 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D3B98F1F9D7B8200B1D942 /* LaunchScreen.storyboard */; };
@@ -21,8 +20,6 @@
 		34D3B9811F9D7B8200B1D942 /* ZLConstraintViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLConstraintViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D3B9841F9D7B8200B1D942 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		34D3B9851F9D7B8200B1D942 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		34D3B9871F9D7B8200B1D942 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		34D3B9881F9D7B8200B1D942 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		34D3B98B1F9D7B8200B1D942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34D3B98D1F9D7B8200B1D942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34D3B9901F9D7B8200B1D942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,8 +62,6 @@
 			children = (
 				34D3B9841F9D7B8200B1D942 /* AppDelegate.h */,
 				34D3B9851F9D7B8200B1D942 /* AppDelegate.m */,
-				34D3B9871F9D7B8200B1D942 /* ViewController.h */,
-				34D3B9881F9D7B8200B1D942 /* ViewController.m */,
 				34D3B99A1F9D7BF500B1D942 /* ZLConstraintViewController.h */,
 				34D3B99B1F9D7BF500B1D942 /* ZLConstraintViewController.m */,
 				34D3B99F1F9D7D0500B1D942 /* ZLConstraintViewController.storyboard */,
@@ -151,7 +146,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34D3B9891F9D7B8200B1D942 /* ViewController.m in Sources */,
 				34D3B99D1F9D7BF500B1D942 /* ZLConstraintViewController.m in Sources */,
 				34D3B9941F9D7B8200B1D942 /* main.m in Sources */,
 				34D3B9861F9D7B8200B1D942 /* AppDelegate.m in Sources */,

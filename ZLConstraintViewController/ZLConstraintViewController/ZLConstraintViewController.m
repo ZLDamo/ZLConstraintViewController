@@ -43,6 +43,7 @@
                     constraint.constant *= temp;
                     NSLog(@"system: %@",constraint);
                 } else {
+                    //非父子关系,约束是相互的
                     constraint.constant *= sqrt(temp);
                     temp = sqrt(temp);
                 }
