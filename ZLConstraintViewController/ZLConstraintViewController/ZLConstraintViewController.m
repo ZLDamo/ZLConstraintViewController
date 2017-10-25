@@ -8,11 +8,13 @@
 
 #import "ZLConstraintViewController.h"
 
-@implementation ZLConstraintViewController
+@implementation ZLConstraintViewController {
+    NSMutableArray *_marray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _marray = [NSMutableArray array];
     for (UIView *view in self.view.subviews) {
         //        NSLog(@"view = %@",view);
         [self setSubviewsConstraint:view];
@@ -22,51 +24,20 @@
     [self.view layoutIfNeeded];
 }
 
-
 - (void)setSubviewsConstraint:(UIView *)view {
     float rate = (float)[UIScreen mainScreen].bounds.size.width / 375.0;
     if (view.superview) {
         NSLog(@"\n\nview: %@\nsuperView:%@",view,view.superview);
         NSArray *array  = view.superview.constraints;
         NSArray *sizeArray = view.constraints;
+        NSLog(@"super array = %@\nself sizeArray = %@",array,sizeArray);
         
         for (NSLayoutConstraint *constraint in array) {
-            if (constraint.firstItem == view ||
-                constraint.secondItem == view) {
-                NSLog(@"😎first = %@",constraint);
-                float temp =  rate;
+            if (![_marray containsObject:constraint]) {
+                //                NSLog(@"%@",constraint);
                 
-                if (view.superview == constraint.firstItem ||
-                    view.superview == constraint.secondItem ) {
-                    constraint.constant *= temp;
-                } else {
-                    NSString *version = [UIDevice currentDevice].systemVersion;
-                     if (version.floatValue >= 9.0) {
-                        if ([constraint.firstItem isMemberOfClass:[UILayoutGuide class]] ||[constraint.secondItem isMemberOfClass:[UILayoutGuide class]]) {
-                            constraint.constant *= temp;
-                            NSLog(@"system: %@",constraint);
-                        } else {
-                            constraint.constant *= sqrt(temp);
-                            temp = sqrt(temp);
-                        }
-                       
-                    } else {
-                        //非父子关系,约束是相互的
-                        constraint.constant *= sqrt(temp);
-                        temp = sqrt(temp);
-                    }
-                }
-                    
-                NSLog(@"rate = %f,😎first:origin = %lf,new = %lf",temp,constraint.constant / temp,constraint.constant);
-            }
-        }
-        
-        for (NSLayoutConstraint *constraint in sizeArray) {
-            if (constraint.firstAttribute == NSLayoutAttributeWidth ||
-                constraint.firstAttribute == NSLayoutAttributeHeight) {
-                NSLog(@"😆sizeContraint = %@",constraint);
-                constraint.constant = constraint.constant * rate;
-                NSLog(@"rate = %f,😆sizeContraint:origin = %lf,new = %lf",rate,constraint.constant / rate,constraint.constant);
+                constraint.constant *= rate;
+                [_marray addObject:constraint];
             }
         }
         
@@ -74,6 +45,15 @@
             for (UIView *sview in view.subviews) {
                 NSLog(@"%@",sview);
                 [self setSubviewsConstraint:sview];
+            }
+        } else {
+            for (NSLayoutConstraint *constraint in sizeArray) {
+                if (constraint.firstAttribute == NSLayoutAttributeWidth ||
+                    constraint.firstAttribute == NSLayoutAttributeHeight) {
+                    NSLog(@"😆sizeContraint = %@",constraint);
+                    constraint.constant = constraint.constant * rate;
+                    NSLog(@"rate = %f,😆sizeContraint:origin = %lf,new = %lf",rate,constraint.constant / rate,constraint.constant);
+                }
             }
         }
     }
