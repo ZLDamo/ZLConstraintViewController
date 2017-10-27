@@ -7,82 +7,45 @@
 //
 
 #import "ZLConstraintViewController.h"
+#import "ZLConstraintManager.h"
+#import "ZLConstraintCell.h"
+
+@interface ZLConstraintViewController() <UITableViewDelegate,UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
+
+@end
 
 @implementation ZLConstraintViewController {
-    NSMutableArray *_marray;
+    ZLConstraintManager *_manager;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _marray = [NSMutableArray array];
-    for (UIView *view in self.view.subviews) {
-        //        NSLog(@"view = %@",view);
-        [self setSubviewsConstraint:view];
-        //        NSLog(@"--------------------------------------------\n\n\n\n");
-    }
+    _tableview.dataSource = self;
+    _tableview.delegate = self;
+    [_tableview registerNib:[UINib nibWithNibName:@"ZLConstraintCell" bundle:nil] forCellReuseIdentifier:@"reuseId"];
     
+    _manager = [ZLConstraintManager manager];
+    [_manager setSubViewsConstraints:self.view];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self.view layoutIfNeeded];
 }
 
-- (void)setSubviewsConstraint:(UIView *)view {
-    float rate = (float)[UIScreen mainScreen].bounds.size.width / 375.0;
-    if (view.superview) {
-        NSLog(@"\n\nview: %@\nsuperView:%@",view,view.superview);
-        NSArray *array  = view.superview.constraints;
-        NSArray *sizeArray = view.constraints;
-        NSLog(@"super array = %@\nself sizeArray = %@",array,sizeArray);
-        
-        for (NSLayoutConstraint *constraint in array) {
-            if (![_marray containsObject:constraint]) {
-                //                NSLog(@"%@",constraint);
-                
-                constraint.constant *= rate;
-                [_marray addObject:constraint];
-            }
-        }
-        
-        if (view.subviews.count > 0) {
-            for (UIView *sview in view.subviews) {
-                NSLog(@"%@",sview);
-                [self setSubviewsConstraint:sview];
-            }
-        } else {
-            for (NSLayoutConstraint *constraint in sizeArray) {
-                if (constraint.firstAttribute == NSLayoutAttributeWidth ||
-                    constraint.firstAttribute == NSLayoutAttributeHeight) {
-                    NSLog(@"😆sizeContraint = %@",constraint);
-                    constraint.constant = constraint.constant * rate;
-                    NSLog(@"rate = %f,😆sizeContraint:origin = %lf,new = %lf",rate,constraint.constant / rate,constraint.constant);
-                }
-            }
-        }
-    }
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
 }
 
-- (BOOL)isTopConstraint:(NSLayoutConstraint *)constraint
-{
-    return  [self firstItemMatchesTopConstraint:constraint] ||
-    [self secondItemMatchesTopConstraint:constraint];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ZLConstraintCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId" forIndexPath:indexPath];
+    
+    return cell;
 }
 
-- (BOOL)firstItemMatchesTopConstraint:(NSLayoutConstraint *)constraint
-{
-    return constraint.firstItem == self && constraint.firstAttribute == NSLayoutAttributeTop;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
 }
-
-- (BOOL)secondItemMatchesTopConstraint:(NSLayoutConstraint *)constraint
-{
-    return constraint.secondItem == self && constraint.secondAttribute == NSLayoutAttributeTop;
-}
-
-- (BOOL)firstItemMatchesBottomConstraint:(NSLayoutConstraint *)constraint
-{
-    return constraint.firstItem == self && constraint.firstAttribute == NSLayoutAttributeBottom;
-}
-
-- (BOOL)secondItemMatchesBottomConstraint:(NSLayoutConstraint *)constraint
-{
-    return constraint.secondItem == self && constraint.secondAttribute == NSLayoutAttributeBottom;
-}
-
 @end

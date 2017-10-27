@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3401D49D1FA2BBD800DFD770 /* ZLConstraintManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3401D49C1FA2BBD800DFD770 /* ZLConstraintManager.m */; };
+		3401D4A01FA2BDC800DFD770 /* ZLConstraintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3401D49F1FA2BDC800DFD770 /* ZLConstraintCell.m */; };
+		3401D4A21FA2BE8300DFD770 /* ZLConstraintCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3401D4A11FA2BE8300DFD770 /* ZLConstraintCell.xib */; };
 		34D3B9861F9D7B8200B1D942 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D3B9851F9D7B8200B1D942 /* AppDelegate.m */; };
 		34D3B98E1F9D7B8200B1D942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D3B98D1F9D7B8200B1D942 /* Assets.xcassets */; };
 		34D3B9911F9D7B8200B1D942 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D3B98F1F9D7B8200B1D942 /* LaunchScreen.storyboard */; };
@@ -17,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3401D49B1FA2BBD800DFD770 /* ZLConstraintManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLConstraintManager.h; sourceTree = "<group>"; };
+		3401D49C1FA2BBD800DFD770 /* ZLConstraintManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLConstraintManager.m; sourceTree = "<group>"; };
+		3401D49E1FA2BDC800DFD770 /* ZLConstraintCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLConstraintCell.h; sourceTree = "<group>"; };
+		3401D49F1FA2BDC800DFD770 /* ZLConstraintCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLConstraintCell.m; sourceTree = "<group>"; };
+		3401D4A11FA2BE8300DFD770 /* ZLConstraintCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLConstraintCell.xib; sourceTree = "<group>"; };
 		34D3B9811F9D7B8200B1D942 /* ZLConstraintViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLConstraintViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D3B9841F9D7B8200B1D942 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		34D3B9851F9D7B8200B1D942 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,7 +72,12 @@
 				34D3B9851F9D7B8200B1D942 /* AppDelegate.m */,
 				34D3B99A1F9D7BF500B1D942 /* ZLConstraintViewController.h */,
 				34D3B99B1F9D7BF500B1D942 /* ZLConstraintViewController.m */,
+				3401D49E1FA2BDC800DFD770 /* ZLConstraintCell.h */,
+				3401D49F1FA2BDC800DFD770 /* ZLConstraintCell.m */,
+				3401D4A11FA2BE8300DFD770 /* ZLConstraintCell.xib */,
 				34D3B99F1F9D7D0500B1D942 /* ZLConstraintViewController.storyboard */,
+				3401D49B1FA2BBD800DFD770 /* ZLConstraintManager.h */,
+				3401D49C1FA2BBD800DFD770 /* ZLConstraintManager.m */,
 				34D3B9A11F9D842D00B1D942 /* Main.storyboard */,
 				34D3B98D1F9D7B8200B1D942 /* Assets.xcassets */,
 				34D3B98F1F9D7B8200B1D942 /* LaunchScreen.storyboard */,
@@ -135,6 +148,7 @@
 				34D3B9911F9D7B8200B1D942 /* LaunchScreen.storyboard in Resources */,
 				34D3B98E1F9D7B8200B1D942 /* Assets.xcassets in Resources */,
 				34D3B9A01F9D7D0500B1D942 /* ZLConstraintViewController.storyboard in Resources */,
+				3401D4A21FA2BE8300DFD770 /* ZLConstraintCell.xib in Resources */,
 				34D3B9A31F9D842D00B1D942 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +162,8 @@
 			files = (
 				34D3B99D1F9D7BF500B1D942 /* ZLConstraintViewController.m in Sources */,
 				34D3B9941F9D7B8200B1D942 /* main.m in Sources */,
+				3401D4A01FA2BDC800DFD770 /* ZLConstraintCell.m in Sources */,
+				3401D49D1FA2BBD800DFD770 /* ZLConstraintManager.m in Sources */,
 				34D3B9861F9D7B8200B1D942 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
