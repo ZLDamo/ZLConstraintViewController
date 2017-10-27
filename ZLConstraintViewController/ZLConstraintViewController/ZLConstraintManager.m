@@ -14,7 +14,9 @@
 
 @end
 
-@implementation ZLConstraintManager
+@implementation ZLConstraintManager {
+    BOOL _isChangeConstriant;
+}
 
 + (instancetype)manager {
     ZLConstraintManager *manager= [[ZLConstraintManager alloc] init];
@@ -23,6 +25,16 @@
 }
 
 - (void)setSubViewsConstraints:(UIView *)superView {
+    if (_isChangeConstriant) {
+        return;
+    }
+    
+    if (superView.subviews.count == 0) return;
+    
+    if (_constraintArray == nil) {
+        _constraintArray = [NSMutableArray array];
+    }
+    
     for (UIView *view in superView.subviews) {
         //        NSLog(@"view = %@",view);
         [self setSubviewsConstraint:view];
@@ -30,6 +42,7 @@
     }
     
     [superView layoutIfNeeded];
+    _isChangeConstriant = true;
 }
 
 - (void)setSubviewsConstraint:(UIView *)view {
