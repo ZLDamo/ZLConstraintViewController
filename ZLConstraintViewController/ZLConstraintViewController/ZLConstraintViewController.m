@@ -8,7 +8,7 @@
 
 #import "ZLConstraintViewController.h"
 #import "ZLConstraintManager.h"
-#import "ZLConstraintCell.h"
+//#import "ZLConstraintCell.h"
 
 @interface ZLConstraintViewController() <UITableViewDelegate,UITableViewDataSource>
 
@@ -40,7 +40,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ZLConstraintCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId" forIndexPath:indexPath];
     
     return cell;
 }
