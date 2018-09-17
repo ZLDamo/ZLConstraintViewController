@@ -14,6 +14,7 @@
 		34D3B99D1F9D7BF500B1D942 /* ZLConstraintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D3B99B1F9D7BF500B1D942 /* ZLConstraintViewController.m */; };
 		34D3B9A01F9D7D0500B1D942 /* ZLConstraintViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D3B99F1F9D7D0500B1D942 /* ZLConstraintViewController.storyboard */; };
 		34D3B9A31F9D842D00B1D942 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D3B9A11F9D842D00B1D942 /* Main.storyboard */; };
+		34E1DE59214FA96C0037CB99 /* ZLConstraintManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E1DE58214FA96C0037CB99 /* ZLConstraintManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		34D3B99B1F9D7BF500B1D942 /* ZLConstraintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLConstraintViewController.m; sourceTree = "<group>"; };
 		34D3B99F1F9D7D0500B1D942 /* ZLConstraintViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ZLConstraintViewController.storyboard; sourceTree = "<group>"; };
 		34D3B9A21F9D842D00B1D942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		34E1DE57214FA96C0037CB99 /* ZLConstraintManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLConstraintManager.h; sourceTree = "<group>"; };
+		34E1DE58214FA96C0037CB99 /* ZLConstraintManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLConstraintManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 				34D3B9851F9D7B8200B1D942 /* AppDelegate.m */,
 				34D3B99A1F9D7BF500B1D942 /* ZLConstraintViewController.h */,
 				34D3B99B1F9D7BF500B1D942 /* ZLConstraintViewController.m */,
+				34E1DE57214FA96C0037CB99 /* ZLConstraintManager.h */,
+				34E1DE58214FA96C0037CB99 /* ZLConstraintManager.m */,
 				34D3B99F1F9D7D0500B1D942 /* ZLConstraintViewController.storyboard */,
 				34D3B9A11F9D842D00B1D942 /* Main.storyboard */,
 				34D3B98D1F9D7B8200B1D942 /* Assets.xcassets */,
@@ -148,6 +153,7 @@
 			files = (
 				34D3B99D1F9D7BF500B1D942 /* ZLConstraintViewController.m in Sources */,
 				34D3B9941F9D7B8200B1D942 /* main.m in Sources */,
+				34E1DE59214FA96C0037CB99 /* ZLConstraintManager.m in Sources */,
 				34D3B9861F9D7B8200B1D942 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
